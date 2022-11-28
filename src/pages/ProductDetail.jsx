@@ -32,7 +32,7 @@ const ProductDetail = () => {
 
           <motion.div className='img-container' >
             <motion.div className='slider' drag='x'
-              dragConstraints={{ right: 150, left: -1000 }}>
+              dragConstraints={{ right: 170, left: -1200 }}>
               {productClicked?.productImgs.map(img =>
 
                 <motion.div className='img-item'>
@@ -57,13 +57,17 @@ const ProductDetail = () => {
       </Row>
 
 
-
+  
       <Row className="justify-content-md-center my-5">
         <h3 className='related-products'>Related products</h3>
-
+        
+            
         {relatedProducts.map(product => (
-          <Col lg={4}>
-            <Card className='my-3' key={product.id}>
+         
+          <Col lg={4} >
+            <div className='underline'></div>   
+             
+            <Card className='my-3 card-item' key={product.id}>
               <Link to={`/productdetail/${product.id}`} className="product-details">
 
                 <Card.Img variant="top"
