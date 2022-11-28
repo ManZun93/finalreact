@@ -31,18 +31,18 @@ const ProductDetail = () => {
         <Col lg={8}>
 
           <motion.div className='img-container' >
-           
+
 
             <motion.div className='slider' drag='x'
-              dragConstraints={{ right: 170, left: -1200 }}>
+              dragConstraints={{ right: 95, left: -1200 }}>
               {productClicked?.productImgs.map(img =>
 
                 <motion.div className='img-item' key={img}>
-                  
+
                   <img src={img} className="principal-image " />
                 </motion.div>
               )}
-              
+
             </motion.div>
             <h6 className='swap-icon'>
               Swipe for more images <i class="fa-regular fa-hand"></i>
