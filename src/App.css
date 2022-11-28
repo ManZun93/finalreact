@@ -1,9 +1,14 @@
 .navbar {
-  padding-top: 50px;
-  border-radius: 15px;
-  width: 90%;
+ 
+  width: 80%;
   margin: auto;
+  border-radius: 20px;
+}
 
+@media (max-width: 600px) {
+  .navbar {
+   width: 90%;
+  }
 }
 
 .navbar-expand .navbar-collapse {
