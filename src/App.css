@@ -106,7 +106,8 @@
 }
 
 .card {
-  padding-top: 3;
+  
+ 
   border-radius: 10px !important;
   height: 450px !important;
 }
@@ -135,10 +136,14 @@
   padding: 0 5rem;
   max-width: 600px;
   max-height: 600px;
-
-
 }
 
+@media (max-width: 600px) {
+  .principal-image {
+    max-width: 450px;
+    max-height: 450px;
+  }
+}
 
 .product-description {
 
@@ -155,8 +160,6 @@
   width: 20%;
   background-color: white;
   height: 1px;
-
-  
 }
 
 .card-item:hover {
