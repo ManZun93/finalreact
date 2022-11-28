@@ -3,12 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Form, InputGroup, ListGroup, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { filterNameProductThunk, filterProductsThunk, getProductsThunk } from '../store/slices/products.slice';
+import { filterNameProduct, filterNameProductThunk, filterProductsThunk, getProductsThunk } from '../store/slices/products.slice';
 
 const Home = () => {
   const dispatch = useDispatch()
   const products = useSelector(state => state.products)
-
   const [categoriesList, setCategoriesList] = useState([])
   const [inputSearch, setInputSearch] = useState("");
 
@@ -19,6 +18,12 @@ const Home = () => {
       .then(res => setCategoriesList(res.data.data.categories))
   }, [])
   console.log(categoriesList)
+
+  // const filterNameProduct = () => {
+  //   const newProducts = products.filter(product => 
+  //     product.title.toLowerCase().includes(inputSearch.toLowerCase()));
+  //   setProductsFiltered(newProducts)
+  // }
   return (
     <div>
       <Row>
@@ -48,7 +53,7 @@ const Home = () => {
               value={inputSearch}
               onChange={(e) => setInputSearch((e.target.value))}
             />
-            <Button variant="outline-info" id="button-addon2" onClick={() => dispatch(filterNameProductThunk(inputSearch))}>
+            <Button variant="outline-info" id="button-addon2" onClick={() => dispatch(filterNameProduct(inputSearch))}>
               Search
             </Button>
           </InputGroup>

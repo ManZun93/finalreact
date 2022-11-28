@@ -28,25 +28,32 @@ const ProductDetail = () => {
       <h1>{productClicked?.title}</h1>
       <h5>US ${productClicked?.price}</h5>
       <Row className='my-5'>
-        <Col lg={9}>
+        <Col lg={8}>
 
           <motion.div className='img-container' >
+           
+
             <motion.div className='slider' drag='x'
               dragConstraints={{ right: 170, left: -1200 }}>
               {productClicked?.productImgs.map(img =>
 
-                <motion.div className='img-item'>
+                <motion.div className='img-item' key={img}>
+                  
                   <img src={img} className="principal-image " />
                 </motion.div>
               )}
+              
             </motion.div>
+            <h6 className='swap-icon'>
+              Swipe for more images <i class="fa-regular fa-hand"></i>
+            </h6>
           </motion.div>
 
 
 
         </Col>
 
-        <Col lg={3} >
+        <Col lg={4} >
           <p className='product-description'>
             {productClicked?.description}
           </p>
@@ -57,17 +64,17 @@ const ProductDetail = () => {
       </Row>
 
 
-  
+
       <Row className="justify-content-md-center my-5">
         <h3 className='related-products'>Related products</h3>
-        
-            
+
+
         {relatedProducts.map(product => (
-         
-          <Col lg={4} >
-            <div className='underline'></div>   
-             
-            <Card className='my-3 card-item' key={product.id}>
+
+          <Col lg={4} key={product.id}>
+            <div className='underline'></div>
+
+            <Card className='my-3 card-item' >
               <Link to={`/productdetail/${product.id}`} className="product-details">
 
                 <Card.Img variant="top"
