@@ -1,41 +1,143 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.navbar {
+  padding-top: 50px;
+  border-radius: 15px;
+  width: 80%;
+  margin: auto;
+
+}
+
+.navbar-expand .navbar-collapse {
+  justify-content: space-around;
+}
+
+.loading-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+
+
+.product-details {
+  text-decoration: none;
   text-align: center;
+  color: white;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.product-details:hover {
+  color: rgb(107, 195, 218);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-image {
+  height: 300px;
+  object-fit: contain;
+  padding: 20px;
+  background: white;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.list {
+
+  text-align: center;
+
+}
+
+
+/* clicked product */
+
+.img-container {
+  background: white;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+
+
+
+
 }
 
 .card {
-  padding: 2em;
+  padding-top: 3;
+  border-radius: 10px !important;
+  height: 450px !important;
 }
 
-.read-the-docs {
-  color: #888;
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: grab;
+  gap: 3rem;
+
+
+
+}
+
+
+.principal-image {
+  pointer-events: none;
+  padding: 0 5rem;
+  max-width: 600px;
+  max-height: 600px;
+
+
+}
+
+
+.product-description {
+
+  text-align: justify;
+}
+
+.related-products {
+  padding-bottom: 1rem;
 }

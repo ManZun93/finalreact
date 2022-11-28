@@ -11,6 +11,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
     "axios": "^1.2.0",
+    "bootswatch": "^5.2.2",
     "framer-motion": "^7.6.12",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
