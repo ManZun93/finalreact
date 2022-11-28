@@ -22,6 +22,16 @@
   right: 50%;
 }
 
+@media (max-width: 600px) {
+  .loading-container {
+   position: absolute;
+    left: 40%;
+   right: 0;
+   top: 50%;
+  }
+}
+
+
 .lds-hourglass {
   display: inline-block;
   position: relative;
