@@ -45,7 +45,7 @@ const ProductDetail = () => {
 
             </motion.div>
             <h6 className='swap-icon'>
-              Swipe for more images <i class="fa-regular fa-hand"></i>
+              Swipe for more images <i className="fa-regular fa-hand"></i>
             </h6>
           </motion.div>
 

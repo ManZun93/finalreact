@@ -186,3 +186,49 @@
   padding-top: 2rem;
   margin: 0;
 }
+
+/* Login */
+
+.login-container{
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   
+}
+
+
+.login-element{
+  border-radius: 15px !important;
+  
+}
+
+
+
+.login-button{
+  width: 30%;
+  margin: auto;
+  border-radius: 10px !important;
+}
+
+
+.purchased-list{
+  list-style: none  ;
+}
+.purchased-products{
+  text-decoration: none;
+  text-align: justify;
+  padding: 20px 0;
+  color: white;
+  margin: 0;
+  display: block;
+}
+
+.purchased-products:hover {
+  color: rgb(129, 201, 219);
+  
+}
+.purchases-container{
+  padding: 30px 0;
+}
