@@ -26,18 +26,18 @@ const ProductDetail = () => {
 
   console.log(relatedProducts)
 
-  let [quantity,setQuantity] = useState("");
+  let [quantity, setQuantity] = useState("");
 
   const addToCart = () => {
-      const products = {
-        id : productClicked.id,
-        quantity : quantity
-        
-      }
-     
+    const products = {
+      id: productClicked.id,
+      quantity: quantity
 
-      
-      dispatch(createCartThunk(products))
+    }
+
+
+
+    dispatch(createCartThunk(products))
   }
 
 
@@ -78,14 +78,15 @@ const ProductDetail = () => {
             {productClicked?.description}
           </p>
 
-          <div className='add to cart'>
-            <input type="number"  value={quantity <= 0 ? quantity = 1 : quantity } 
-            onChange={(e) => setQuantity(e.target.value)}
-      
+          <div className='add-to-cart'>
+
+            <input type="number" value={quantity <= 0 ? quantity = 1 : quantity}
+              onChange={(e) => setQuantity(e.target.value)}
             />
-            <Button onClick={addToCart}>
+            <Button  onClick={addToCart} >
               Add to cart
             </Button>
+
           </div>
 
         </Col>
@@ -101,7 +102,7 @@ const ProductDetail = () => {
 
         {relatedProducts.map(product => (
 
-          <Col lg={4} key={product.id}>
+          <Col lg={4} key={product.id} className="underline-container">
             <div className='underline'></div>
 
             <Card className='my-3 card-item' >
