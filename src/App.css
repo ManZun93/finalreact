@@ -178,7 +178,7 @@
 }
 
 .card-item:hover {
-  box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);;
+  box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
 }
 
 .swap-icon{
@@ -231,4 +231,33 @@
 }
 .purchases-container{
   padding: 30px 0;
+}
+
+
+/* cart */
+
+.product-in-cart{
+  background: rgba(255, 255, 255, 0.959);
+  border: 0.5px solid black;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.product-in-cart:hover{
+  box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
+  border: 0.5px solid rgba(0, 0, 0, 0);
+
+}
+
+.product-in-cart p{
+  color: rgb(0, 0, 49);
+  
+}
+
+.cart-title{
+  text-align: center !important;
+}
+.cart-button{
+  display: flex;
+  flex-direction: column;
 }
