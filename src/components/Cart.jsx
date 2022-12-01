@@ -23,12 +23,12 @@ const Cart = ({ show, handleClose, }) => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Col className='cart-products-container' >
-             <div className='underline '></div>
+              <div className='underline '></div>
               {cart.map(product => (
                 <div key={product.id} className="product-in-cart my-4">
-                  
+
                   <p>{product.title}</p>
-                  
+
                   <p>Quantity: {product.productsInCart.quantity}</p>
                   <p>Price: $ {Number(product.price)} </p>
                   <p>Subtotal: $ {(Number(product.price) * product.productsInCart.quantity).toFixed(2)}</p>

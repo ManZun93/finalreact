@@ -13,7 +13,7 @@ export const productsSlice = createSlice({
     filterNameProduct: (state, action) => {
       const inputSearch = action.payload;
       console.log("Me ejecute")
-      return state.filter(product => 
+      return state.filter(product =>
         product.title.toLowerCase().includes(inputSearch.toLowerCase())
       );
     }
