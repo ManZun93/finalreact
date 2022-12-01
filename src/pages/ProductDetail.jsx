@@ -80,7 +80,7 @@ const ProductDetail = () => {
 
           <div className='add-to-cart'>
 
-            <input type="number" value={quantity <= 0 ? quantity = 1 : quantity}
+            <input type="number" value={quantity <= 0 ? quantity = "" : quantity}
               onChange={(e) => setQuantity(e.target.value)}
             />
             <Button onClick={addToCart} >
