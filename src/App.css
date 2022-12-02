@@ -232,6 +232,12 @@ width: 50%;
 
 }
 
+@media (max-width: 600px) {
+  .purchases-list {
+    width: 90%;
+    margin: auto;
+  }
+}
 
 .purchased-products {
   text-decoration: none;
