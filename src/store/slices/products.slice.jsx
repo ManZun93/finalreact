@@ -17,6 +17,7 @@ export const productsSlice = createSlice({
         product.title.toLowerCase().includes(inputSearch.toLowerCase())
       );
     }
+    
   }
 })
 

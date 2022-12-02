@@ -37,6 +37,14 @@ export const checkoutCart = () => (dispatch) => {
     .finally(() => dispatch(setIsLoading(false)));
 }
 
+export const deleteProduct = (id) => (dispatch)=> {
+  dispatch(setIsLoading(true));
+  axios.delete(`https://e-commerce-api.academlo.tech/api/v1/cart/${id}`, getConfig() )
+  .then(() => dispatch(cartThunk()))
+  .finally(() => dispatch(setIsLoading(false)));
+}
+
+
 export const { setCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

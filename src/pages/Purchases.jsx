@@ -21,9 +21,11 @@ const Purchases = () => {
               {purchase.cart.products?.map(product => (
                 <li key={product.id} className="purchased-list">
                   <Link to={`/productdetail/${product.id}`} className="purchased-products">
-                    <p><b>Product: </b>{product.title}</p>
+                    <div className='purchases-list'>
+                    <p><b>{product.title}</b></p>
                     <p><b>Price: </b>${product.price}</p>
                     <p><b>Purchase Date: </b>{product.createdAt}</p>
+                    </div>
                   </Link>
                 </li>
               ))}
